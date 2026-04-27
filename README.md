@@ -2,8 +2,6 @@
 
 ## Setup
 
-Create Django project
-
 ```bash
 uv sync
 ```
@@ -12,7 +10,7 @@ uv sync
 django-admin startproject myproject --template https://github.com/django-cms/cms-template/archive/5.1.tar.gz
 ```
 
-Delete the created requirements.txt and README.md
+Delete useless files like the initialized requirements.txt, etc.
 
 ```bash
 uv run src/manage.py migrate
@@ -28,4 +26,12 @@ uv run src/manage.py cms check
 
 ```bash
 uv run src/manage.py runserver
+```
+
+## Useful Stuff
+
+Create a Django app
+
+```bash
+django_cms_tutorial/src/myproject/contrib$ uv run ../../manage.py startapp pages
 ```
