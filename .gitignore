@@ -1,0 +1,36 @@
+*~
+.idea/
+.vscode/
+.venv
+.env
+__pycache__/
+*.py[co]
+db.sqlite3
+postbank.db
+settings_local.py
+/media
+/static
+/data
+/node_modules
+/out
+src/postbank/static/vendor/
+temporary/
+
+# compiled from scss
+src/postbank/static/css/style.css
+src/postbank/static/css/style.css.map
+
+# Translation files
+*.mo
+
+# Logs
+*.log
+
+# Ignore helm chart archives.
+*.tgz
+
+# Azurite (Azure blob storage emulator)
+__blobstorage__/
+__azurite_db_*.json
+
+.DS_Store

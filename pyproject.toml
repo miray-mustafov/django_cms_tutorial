@@ -1,0 +1,16 @@
+[project]
+name = "django_cms_tutorial"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=5.2.10,<6",
+    "django-cms>=5.0.5,<6",
+]
+
+[dependency-groups]
+dev = [
+    "psycopg[binary,pool]>=3.3.2",
+    "commitizen>=4.13.10",
+    "directory-tree>=1.0.0",
+]
