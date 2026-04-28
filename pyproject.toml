@@ -14,6 +14,13 @@ dependencies = [
     "django-fsm",
     "djangocms-simple-admin-style",
     "django-treebeard",
+    # Miscellaneous recommended
+    "djangocms-file",
+    "djangocms-picture",
+    "djangocms-video",
+    "djangocms-googlemap",
+    "djangocms-snippet",
+    "djangocms-style",
 ]
 
 [dependency-groups]
