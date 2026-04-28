@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
     # CMS base apps
     'cms',
     'menus',
@@ -53,6 +54,9 @@ INSTALLED_APPS = [
     'djangocms_frontend.contrib.navigation',
     'djangocms_frontend.contrib.tabs',
     'djangocms_frontend.contrib.utilities',
+
+    # Custom apps
+    'myproject.contrib.pages',
 ]
 
 MIDDLEWARE = [
