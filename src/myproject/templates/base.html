@@ -1,5 +1,5 @@
 <!DOCTYPE html>{% load cms_tags menu_tags sekizai_tags static i18n %}
-<html lang="{{ LANGUAGE_CODE }}">
+<html lang="{{ request.LANGUAGE_CODE }}">
     <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -34,7 +34,7 @@
         {% block navbar %}{% endblock %}  {# Child templates can insert a navigation bar here.#}
 
         {% block content %} {# Main content block #}
-            {% placeholder "Content" %}  {# Primary CMS placeholder where editors add plugins #}
+            {% placeholder "content" %}  {# Primary CMS placeholder where editors add plugins #}
         {% endblock content %}
 
         {% block base_js %}{% endblock %} {# Child templates to add extra <script>/js content #}

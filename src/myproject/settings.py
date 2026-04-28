@@ -165,7 +165,7 @@ SITE_ID = 1
 
 CMS_TEMPLATES = (
     # Default template that extend base.html, to be used with Bootstrap 5
-    ('bootstrap5_base.html', 'Bootstrap 5 + Base'),
+    ('base_bootstrap5.html', 'Base + Bootstrap5'),
 
     ('base.html', 'Base'),
 
