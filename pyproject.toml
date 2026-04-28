@@ -12,7 +12,7 @@ dependencies = [
     "django-filer",
     "djangocms-text",
     "django-fsm",
-    "djangocms-simple-admin-style",
+    "djangocms-simple-admin-style", 
     "django-treebeard",
     # Miscellaneous recommended
     "djangocms-file",

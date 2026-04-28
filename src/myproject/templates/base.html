@@ -1,2 +1,25 @@
-{# Replace this with your base template #}
 {% extends "bootstrap5/base.html" %}
+
+{% load cms_tags sekizai_tags static %}
+
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+    <head>
+    <meta charset="UTF-8"/>
+        <title>{% page_attribute "page_title" %}</title>
+
+        {% render_block "css" %}
+
+    </head>
+    <body>
+        {% cms_toolbar %}
+        {% render_block "js" %}
+
+        <main>
+            {% block content %}
+                {% placeholder "content" %}
+            {% endblock %}
+        </main>
+
+    </body>
+</html>

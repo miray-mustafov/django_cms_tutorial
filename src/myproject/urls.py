@@ -6,6 +6,7 @@ from django.urls import include, path
 from django.views.i18n import JavaScriptCatalog
 
 urlpatterns = i18n_patterns(
+
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
     path('admin/', admin.site.urls),
     path('filer/', include('filer.urls')),
@@ -13,7 +14,7 @@ urlpatterns = i18n_patterns(
     # Custom urls
     path('pages/', include('myproject.contrib.pages.urls')),
 
-    # CMS urls
+    # CMS urls !
     path('', include('cms.urls')),
 )
 

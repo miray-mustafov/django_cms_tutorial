@@ -1,18 +1,15 @@
+{% extends "base.html" %}
 {% load cms_tags sekizai_tags %}
 
-<html>
-    <head>
-        <title>
-            {% page_attribute "page_title" %}
-        </title>
-        {% render_block "css" %}
-    </head>
-    <body>
-        {% cms_toolbar %}
+{% block content %}
+    <h1>
+        Hello, There!
+    </h1>
+    <p>
+        This is a sample Django CMS Home Page.
+    </p>
+    <div>
         {% placeholder "content" %}
-        {% render_block "js" %}
+    </div>
 
-        Hello, Miray!
-
-    </body>
-</html>
+{% endblock %}
