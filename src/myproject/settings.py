@@ -164,8 +164,14 @@ CMS_CONFIRM_VERSION4 = True
 SITE_ID = 1
 
 CMS_TEMPLATES = (
-    ("base.html", _("Standard")),
-    ("home.html", _("Home page template")),
+    # Default template that extend base.html, to be used with Bootstrap 5
+    ('bootstrap5.html', 'Bootstrap 5 + Base'),
+
+    ('base.html', 'Base'),
+
+    ('minimal.html', 'Minimal'),
+
+    ('whitenoise-static-files-demo.html', 'Static File'),
 )
 
 CMS_PERMISSION = True

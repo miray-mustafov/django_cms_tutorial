@@ -35,3 +35,7 @@ Create a Django app
 ```bash
 django_cms_tutorial/src/myproject/contrib$ uv run ../../manage.py startapp pages
 ```
+
+```bash
+uv run python -m directory_tree -I .venv node_modules __pycache__ data media static out temporary
+```

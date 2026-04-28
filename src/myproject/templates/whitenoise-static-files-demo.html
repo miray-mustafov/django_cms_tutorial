@@ -1,4 +1,4 @@
-{% load cms_tags sekizai_tags %}
+{% load cms_tags sekizai_tags static %}
 <html>
     <head>
         <title>{% page_attribute "page_title" %}</title>
@@ -6,6 +6,9 @@
     </head>
     <body>
         {% cms_toolbar %}
+
+        <img src="{% static "django-cms-logo.png" %}" \/>
+
         {% placeholder "Content" %}
         {% render_block "js" %}
     </body>
