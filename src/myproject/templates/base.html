@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load cms_tags menu_tags sekizai_tags static i18n %}
+<!DOCTYPE html>{% load cms_tags menu_tags sekizai_tags static i18n djangocms_alias_tags %}
 <html lang="{{ request.LANGUAGE_CODE }}">
     <head>
         <meta charset="utf-8"/>
@@ -29,13 +29,20 @@
         {% block page_head %}{% endblock %} {# A general-purpose hook for child templates to add extra <head> content.#}
     </head>
     <body {% block body_attrs %}{% endblock %}>  {# Allows child templates to add classes or data attributes to <body>. #}
-
         {% cms_toolbar %}  {# Displays the django CMS editing toolbar for staff users.#}
         {% block navbar %}{% endblock %}  {# Child templates can insert a navigation bar here.#}
 
-        {% block content %} {# Main content block #}
-            {% placeholder "content" %}  {# Primary CMS placeholder where editors add plugins #}
+
+        {% placeholder "Content" %}  {# Primary CMS placeholder where editors add plugins available in each child template #}
+
+        {% block content %}
+            {# Main content #}
         {% endblock content %}
+
+        <footer>
+            {% static_alias 'footer' %}
+        </footer>
+
 
         {% block base_js %}{% endblock %} {# Child templates to add extra <script>/js content #}
         {% render_block 'js' %} {# Renders JavaScript collected from CMS plugins. Placed at the bottom for performance #}
