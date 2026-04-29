@@ -1,0 +1,5 @@
+<h1>{{ instance.question }}</h1>
+
+{% for choice in instance.choice_set.all %}
+    <p>{{ choice.choice_text }}</p>
+{% endfor %}
