@@ -65,6 +65,7 @@ INSTALLED_APPS = [
 
     # Custom apps
     'myproject.contrib.pages',
+    'myproject.contrib.polls',
 ]
 
 MIDDLEWARE = [

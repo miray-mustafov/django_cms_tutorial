@@ -25,7 +25,7 @@ uv run src/manage.py cms check
 ```
 
 ```bash
-uv run src/manage.py runserver
+uv run src/manage.py runserver 8000
 ```
 
 ## Useful Stuff

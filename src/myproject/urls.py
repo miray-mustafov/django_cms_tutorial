@@ -13,6 +13,7 @@ urlpatterns = i18n_patterns(
 
     # Custom urls
     path('pages/', include('myproject.contrib.pages.urls')),
+    path('polls/', include('myproject.contrib.polls.urls')),
 
     # CMS urls !
     path('', include('cms.urls')),

@@ -12,9 +12,8 @@ dependencies = [
     "django-filer",
     "djangocms-text",
     "django-fsm",
-    "djangocms-simple-admin-style", 
+    "djangocms-simple-admin-style",
     "django-treebeard",
-    # Miscellaneous recommended
     "djangocms-file",
     "djangocms-picture",
     "djangocms-video",
@@ -29,3 +28,6 @@ dev = [
     "commitizen>=4.13.10",
     "directory-tree>=1.0.0",
 ]
+
+[tool.uv.sources]
+polls = { git = "http://github.com/divio/django-polls.git" }

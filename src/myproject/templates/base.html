@@ -33,18 +33,22 @@
         {% block navbar %}{% endblock %}  {# Child templates can insert a navigation bar here.#}
 
 
+{#        {% load menu_tags %}#}
+{#        <ul class="nav">#}
+{#            {% show_menu 0 100 100 100 %}#}
+{#        </ul>#}
+
         {% block content_header %}
             {% placeholder "Content (base.html)" %}  {# Primary CMS placeholder where editors add plugins available in each child template #}
         {% endblock %}
-
         {% block content %}
         {% endblock content %}
-
         {% block content_footer %}
             <footer>
                 {% static_alias 'Footer (base.html)' %}
             </footer>
         {% endblock %}
+
 
 {#        {% block experimenting %}#}
 {#            <p style="color: gray;">base.html Experimenting Block </p>#}
