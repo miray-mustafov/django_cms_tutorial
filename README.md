@@ -30,10 +30,8 @@ uv run src/manage.py runserver 8000
 
 ## Useful Stuff
 
-Create a Django app
-
 ```bash
-django_cms_tutorial/src/myproject/contrib$ uv run ../../manage.py startapp pages
+uv run src/manage.py startapp pages
 ```
 
 ```bash

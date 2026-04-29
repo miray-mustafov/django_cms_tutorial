@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     # Custom apps
     'myproject.contrib.pages',
     'myproject.contrib.polls',
+    'myproject.contrib.cms_polls',
 ]
 
 MIDDLEWARE = [
@@ -165,14 +166,9 @@ CMS_CONFIRM_VERSION4 = True
 SITE_ID = 1
 
 CMS_TEMPLATES = (
-    # Default template that extend base.html, to be used with Bootstrap 5
     ('base_bootstrap5.html', 'Base + Bootstrap5'),
-
     ('base.html', 'Base'),
 
-    ('minimal.html', 'Minimal'),
-
-    ('whitenoise-static-files-demo.html', 'Static File'),
 )
 
 CMS_PERMISSION = True
