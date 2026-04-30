@@ -1,5 +1,7 @@
 # Django CMS Tutorial
 
+![poll_choices.png](photos/poll_choices.png)
+
 ## Setup
 
 ```bash
@@ -42,3 +44,8 @@ uv run python -m directory_tree -I .venv node_modules __pycache__ data media sta
 cms list plugins
 cms delete-orphaned-plugins
 ```
+
+## Screenshots
+
+![poll_choices.png](photos/poll_choices.png)
+![poll_results.png](photos/poll_results.png)
