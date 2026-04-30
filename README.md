@@ -63,7 +63,7 @@ todo
 
 - Why: Non-technical users to manage content in a website.
 - Examples: **Djnago CMS**, Strapi (JS Headless CMS), Wordpress (PHP traditional CMS)
-- What:   
+- What:  
   a system for creating, editing, organizing, and publishing website content through a user interface  
   usually provides pages, content blocks, media management, workflows, permissions, and previews
 
@@ -71,25 +71,21 @@ todo
 
 - Why:  
   To give editors an entity that can be managed visually instead of being hardcoded  
-  It is the basic container where CMS content, **placeholders**, aliases, **plugins**, and **apphooks** can live.    
-<br>
+  It is the basic container where CMS content, **placeholders**, aliases, **plugins**, and **apphooks** can live.
 - Examples:  
-  home page, about page, contact page, polls page, blog page, product landing page  
-<br>
+  home page, about page, contact page, polls page, blog page, product landing page
 - What:  
   a page object managed by django CMS   
   usually has a title, slug, language versions, template, and placeholders  
   can contain plugins and static content blocks  
   can also have advanced settings, such as an attached apphook  
-  can be nested into a page tree, so the site structure is editable by content editors    
-<br>
+  can be nested into a page tree, so the site structure is editable by content editors
 - How it works:  
   An editor creates a page in the CMS admin or toolbar  
   selects a template for it  
   adds content into placeholders  
   optionally attaches plugins or apphooks  
-  django CMS then serves that page at its URL  
-<br>
+  django CMS then serves that page at its URL
 - **So a CMS Page is more like**:  
   "this is an editable page in the site structure"  
   not:  
@@ -97,13 +93,10 @@ todo
 
 ### Plugin
 
-- Why: same as CMS  
-<br>
-- Examples: poll widget, image gallery, form, card, banner, product teaser  
-<br>
+- Why: same as CMS
+- Examples: poll widget, image gallery, form, card, banner, product teaser
 - What:  
-  drag&drop, reusable, editable page fragments/content which will be managed by the editors  
-<br>
+  drag&drop, reusable, editable page fragments/content which will be managed by the editors
 - Consists of:
     - Plugin model [models.py](src/myproject/contrib/cms_polls/models.py)   
       stores data for a content block
@@ -113,8 +106,7 @@ todo
       defines: name, plugin model  
       which template to use  
       how to prepare the context for the template  
-      inherits from `CMSPluginBase`  
-<br>
+      inherits from `CMSPluginBase`
 - How it works:  
   When an editor clicks + in a placeholder:
   django CMS shows the list of registered plugins
@@ -122,8 +114,6 @@ todo
   django CMS creates a plugin instance in the database
   the plugin data is saved
   the chosen template renders it on the page
-
-
 - **So a plugin is more like**:  
   "drop this widget here"  
   not:  
