@@ -47,5 +47,10 @@ cms delete-orphaned-plugins
 
 ## Screenshots
 
-![poll_choices.png](photos/poll_choices.png)
-![poll_results.png](photos/poll_results.png)
+- Polls
+  ![poll_choices.png](photos/poll_choices.png)
+  ![poll_results.png](photos/poll_results.png)
+
+
+- Applied apphook to polls
+  ![polls_applied_apphook.png](photos/polls_applied_apphook.png)
