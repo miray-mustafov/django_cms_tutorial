@@ -13,6 +13,8 @@ urlpatterns = i18n_patterns(
 
     # Custom urls
     path('pages/', include('myproject.contrib.pages.urls')),
+
+    # we can omit this line because of the configuration with apphook
     # path('polls/', include('myproject.contrib.polls.urls')),
 
     # CMS urls !
