@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'myproject.contrib.pages',
     'myproject.contrib.polls',
     'myproject.contrib.cms_polls',
+    'myproject.contrib.simple_digital_wallet',
 ]
 
 MIDDLEWARE = [
