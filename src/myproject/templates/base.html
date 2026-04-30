@@ -18,7 +18,7 @@
 
         {% block fb_meta %}{% endblock fb_meta %}  {# Reserved for Facebook App ID, Pixel, or other FB-specific metadata. Empty by default; child templates may override.#}
 
-        <title>
+    <title>
             {% block title %}  {# Controls the <title> tag shown in the browser tab. Defaults to the CMS page title.#}
                 {% page_attribute "page_title" %}
             {% endblock %}

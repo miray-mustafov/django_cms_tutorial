@@ -67,6 +67,8 @@ todo
   a system for creating, editing, organizing, and publishing website content through a user interface  
   usually provides pages, content blocks, media management, workflows, permissions, and previews
 
+
+
 ### CMS Page:
 
 - Why:  
@@ -91,6 +93,18 @@ todo
   not:  
   "a hardcoded Django view template only"  
 
+### CMS Tags
+
+- `{% placeholder "content" %}`  
+  A page‑specific editable region where editors can insert plugins.
+  It belongs to a single page and stores its content in the draft/public trees.
+- `{% static_alias "footer-links" %}`  
+  A **reusable** named content block that can be inserted into multiple pages.
+- `{% static_placeholder "global-header" %}`  
+  A shared, globally editable placeholder‑like area that behaves like a normal placeholder but is not tied to a specific page.  
+  Purpose:  
+  Allows editors to manage shared content (e.g., header banners, footers, splashboxes) using the same drag‑and‑drop plugin interface as normal placeholders.  
+  Unlike static_alias, this one supports full plugin editing, not just a single block of text.  
 ### Plugin
 
 - Why: same as CMS
