@@ -1,4 +1,4 @@
-# Django CMS Tutorial
+# Django CMS Tutorial Project
 
 ![project_logo.png](photos/project_logo.png)
 
@@ -45,7 +45,7 @@ uv run src/manage.py startapp pages
 ```
 
 ```bash
-uv run python -m directory_tree -I .venv node_modules __pycache__ data media static out temporary
+uv run python -m directory_tree -I .venv node_modules __pycache__ data media static out temporary photos
 ```
 
 ```bash
@@ -55,7 +55,24 @@ cms delete-orphaned-plugins
 
 ## Folder Structure
 
-todo
+`tree -d -I "__pycache__|temporary|photos"`
+
+```bash
+.                                       # repo/project root
+└─ src                                  # django project root; source root
+  ├─ manage.py                          # django project management script                      
+  └─ myproject                          # main django package (settings, urls, wsgi/asgi)
+    ├── static                          # global static files (css, js, images)
+    ├── templates                       # global html templates shared across apps
+    └── contrib                         # django apps
+       ├── cms_polls                    # cms app
+       ├── polls                        # normal app
+       ├── polls_cms_integration        # cms app that uses polls app
+       │  ├── migrations                # database migrations for this app
+       │  └── templates                 # app-specific templates
+       │     └── polls_cms_integration  # folder for namespacing to avoid conflicts
+       └── simple_digital_wallet        # cms app
+```
 
 ## Theory
 
@@ -66,8 +83,6 @@ todo
 - What:  
   a system for creating, editing, organizing, and publishing website content through a user interface  
   usually provides pages, content blocks, media management, workflows, permissions, and previews
-
-
 
 ### CMS Page:
 
@@ -91,7 +106,7 @@ todo
 - **So a CMS Page is more like**:  
   "this is an editable page in the site structure"  
   not:  
-  "a hardcoded Django view template only"  
+  "a hardcoded Django view template only"
 
 ### CMS Tags
 
@@ -101,10 +116,13 @@ todo
 - `{% static_alias "footer-links" %}`  
   A **reusable** named content block that can be inserted into multiple pages.
 - `{% static_placeholder "global-header" %}`  
-  A shared, globally editable placeholder‑like area that behaves like a normal placeholder but is not tied to a specific page.  
+  A shared, globally editable placeholder‑like area that behaves like a normal placeholder but is not tied to a specific
+  page.  
   Purpose:  
-  Allows editors to manage shared content (e.g., header banners, footers, splashboxes) using the same drag‑and‑drop plugin interface as normal placeholders.  
-  Unlike static_alias, this one supports full plugin editing, not just a single block of text.  
+  Allows editors to manage shared content (e.g., header banners, footers, splashboxes) using the same drag‑and‑drop
+  plugin interface as normal placeholders.  
+  Unlike static_alias, this one supports full plugin editing, not just a single block of text.
+
 ### Plugin
 
 - Why: same as CMS
@@ -134,8 +152,10 @@ todo
   "serve this app at this URL"
 
 ### Apphook
+
 [cms_apps.py](src/myproject/contrib/polls_cms_integration/cms_apps.py)  
 there is screenshot below too
+
 - Why:  
   To attach a whole Django app to a CMS page, so the app becomes part of the CMS site structure instead of being
   hardcoded in the project URLs.  
