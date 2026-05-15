@@ -17,7 +17,7 @@ uv sync
 ```
 
 ```bash
-tree -d -I "__pycache__|temporary|photos"
+django-admin startproject myproject --template https://github.com/django-cms/cms-template/archive/5.1.tar.gz
 ```
 
 Delete useless files like the initialized requirements.txt, etc.
@@ -45,7 +45,7 @@ uv run src/manage.py startapp pages
 ```
 
 ```bash
-uv run python -m directory_tree -I .venv node_modules __pycache__ data media static out temporary photos
+tree -d -I "|static|__pycache__|temporary|photos"
 ```
 
 ```bash
@@ -85,6 +85,8 @@ cms delete-orphaned-plugins
 - Examples: **Django CMS**, Strapi (JS Headless CMS), WordPress (PHP traditional CMS)
 
 ### Plugin
+
+![example_plugin.png](photos/example_plugin.png)
 
 - What:  
   drag&drop, reusable, editable page fragments/content which will be managed by the editors
@@ -160,6 +162,15 @@ cms delete-orphaned-plugins
 ### cms_plugins.py
 
 - Place to define plugin publishers. How plugins will be rendered on the page.
+
+### Toolbar
+
+![toolbar.png](photos/toolbar.png)
+
+- What: [cms_toolbars.py](src/myproject/contrib/polls_cms_integration/cms_toolbars.py)    
+  ...
+- Why:
+  convenience for the editor
 
 ## Screenshots
 
